@@ -94,19 +94,3 @@ This project is licensed under the [MIT License](LICENSE). Feel free to use, mod
 Got questions or want to collaborate? Open an issue on this repo.
 
 Let’s unmask the circus together! 🇮🇳✊
-
-
----
-
-### Updates Made:
-1. **Live Demo Link**: Changed to your actual GitHub Pages URL: `https://godi-modi.github.io/`.
-2. **Clone URL**: Updated to `https://github.com/godi-modi/godi-media-unmasked.git` based on your username (`godi-modi`).
-3. **Contact Section**: Removed the X handle placeholder since you didn’t provide one, and directed users to open issues instead.
-4. **Banner**: Still using a placeholder image. If you’d like, you can create a banner (e.g., 800x200px) and upload it to your repo as `banner.png`, then update the line to `![Banner](banner.png)`.
-
-### Next Steps:
-1. **Add to Your Repo**: Copy this text into a `README.md` file in your repository’s root directory (`godi-media-unmasked`).
-2. **License File**: If you’re okay with the MIT License, add a `LICENSE` file with the MIT text (shared in my previous response) to your repo.
-3. **Push to GitHub**: Commit and push the `README.md` to make it visible on your repo page.
-
-This README should attract contributors and clearly explain how to get involved. Let me know if you want to add more sections or refine it further!
