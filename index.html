@@ -5,7 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Godi Media Unmasked</title>
     <style>
-        /* [Previous CSS remains unchanged] */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; background: #f4f4f4; color: #333; line-height: 1.6; }
+        header { background: #ff4444; color: white; text-align: center; padding: 2rem; }
+        header h1 { font-size: 2.5rem; }
+        header p { font-size: 1.2rem; font-style: italic; }
+        nav { background: #333; padding: 1rem; text-align: center; }
+        nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; }
+        nav a:hover { color: #ff4444; }
+        .section { padding: 2rem; max-width: 800px; margin: 0 auto; }
+        .shame-card { background: white; padding: 1rem; margin: 1rem 0; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .shame-card h3 { color: #ff4444; }
+        .fact-fiction { display: flex; justify-content: space-between; margin: 1rem 0; }
+        .fact-fiction div { width: 48%; background: white; padding: 1rem; border-radius: 5px; }
+        .meme-zone { text-align: center; }
+        .meme-zone img { max-width: 100%; height: auto; margin: 1rem 0; }
+        footer { background: #333; color: white; text-align: center; padding: 1rem; margin-top: 2rem; }
+        .btn { display: inline-block; background: #ff4444; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; }
+        .btn:hover { background: #cc3333; }
         .language-selector { 
             padding: 1rem; 
             text-align: center; 
@@ -27,6 +44,7 @@
             <option value="hi">Hindi</option>
             <option value="ta">Tamil</option>
             <option value="te">Telugu</option>
+            <option value="mr">Marathi</option>
         </select>
     </div>
 
@@ -192,6 +210,31 @@
                 "memes-desc": "గోడీ మీడియా “విపక్షం ముగిసిపోయింది” అని చెప్పినప్పుడు కానీ ఎన్నికలు ఉన్నాయని మర్చిపోతుంది.",
                 "memes-note": "<em>చిత్రం త్వరలో వస్తుంది—కస్టమ్ కావాలా? నాకు చెప్పండి!</em>",
                 "footer": "© 2025 గోడీ మీడియా ముసుగు తీసేసింది | అవగాహన యుద్ధం కోసం నిర్మించబడింది"
+            },
+            mr: {
+                "title": "गोदी मीडियाचा मुखवटा काढला",
+                "subtitle": "जिथे चाटणारे कुत्रे राखणदारांपेक्षा जास्त भुंकतात",
+                "nav-home": "होम",
+                "nav-shame": "लज्जास्पद सभागृह",
+                "nav-facts": "वास्तव विरुद्ध कल्पना",
+                "nav-memes": "मीम झोन",
+                "home-title": "जागरूकतेच्या लढाईत आपले स्वागत",
+                "home-desc": "रात्री 9 वाजताच्या वादविवादांनी कंटाळा आला का? \"राष्ट्राला जाणून घ्यायचे आहे\" असे ओरडत बूट पॉलिश करतात! गोदी मीडियाच्या सर्कशीला व्यंग्य, तथ्ये आणि भरपूर सावलींसह उघड करण्यासाठी आम्ही इथे आहोत. खाली स्क्रोल करा आणि लढाईत सामील व्हा!",
+                "home-btn": "वेडेपणात प्रवेश करा",
+                "shame-title": "गोदी लज्जास्पद सभागृह",
+                "shame-1-title": "56 इंच छाती मोजण्याची स्पर्धा",
+                "shame-1-desc": "अँकर X ने दावा केला की मोदींची छाती हस्तांदोलनानंतर 2 इंच वाढली. आम्ही तपासले—अजूनही 56 इंच, पण टीव्ही ग्राफिक्स ऑस्करसाठी पात्र आहेत.",
+                "shame-2-title": "ब्रेकिंग न्यूज: गायीने अर्थव्यवस्थेला आशीर्वाद दिला",
+                "shame-2-desc": "चॅनल Y म्हणाले की गायीच्या हंबरड्याने जीडीपी वाढली. वास्तव: आरबीआय आकडेवारी नाकारते, पण गायीची पीआर टीम भरभराटीला आहे.",
+                "facts-title": "वास्तव विरुद्ध कल्पना",
+                "fiction-title": "कल्पना",
+                "fiction-desc": "“मोदींनी गायीला हात हलवला म्हणून भारत नंबर 1!”",
+                "fact-title": "वास्तव",
+                "fact-desc": "जीडीपी वाढ दुसरे काही सांगते—व्हॉट्सअॅप फॉरवर्ड नाही, आरबीआय तपासा.",
+                "memes-title": "मीम झोन",
+                "memes-desc": "जेव्हा गोदी मीडिया म्हणते “विरोधक संपले” पण निवडणुका असतात हे विसरते.",
+                "memes-note": "<em>प्रतिमा लवकरच येत आहे—सानुकूल हवे का? मला सांगा!</em>",
+                "footer": "© 2025 गोदी मीडियाचा मुखवटा काढला | जागरूकतेच्या लढाईसाठी बांधले गेले"
             }
         };
 
