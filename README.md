@@ -1,6 +1,6 @@
 # Godi Media Unmasked
 
-![Banner](https://via.placeholder.com/800x200.png?text=Godi+Media+Unmasked)  
+![Banner](banner.png)  
 *Where Lapdogs Bark Louder Than Watchdogs*
 
 Welcome to **Godi Media Unmasked**, an open-source project dedicated to exposing the circus of biased media with satire, facts, and a healthy dose of humor. Hosted at [https://godi-modi.github.io/](https://godi-modi.github.io/), this is a battle for awareness—a space for patriots to call out the boot-polishing, decibel-driven nonsense masquerading as journalism. Join the fight, contribute, and let’s unmask the circus together!
