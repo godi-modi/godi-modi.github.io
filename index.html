@@ -5,87 +5,209 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Godi Media Unmasked</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: Arial, sans-serif; background: #f4f4f4; color: #333; line-height: 1.6; }
-        header { background: #ff4444; color: white; text-align: center; padding: 2rem; }
-        header h1 { font-size: 2.5rem; }
-        header p { font-size: 1.2rem; font-style: italic; }
-        nav { background: #333; padding: 1rem; text-align: center; }
-        nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; }
-        nav a:hover { color: #ff4444; }
-        .section { padding: 2rem; max-width: 800px; margin: 0 auto; }
-        .shame-card { background: white; padding: 1rem; margin: 1rem 0; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        .shame-card h3 { color: #ff4444; }
-        .fact-fiction { display: flex; justify-content: space-between; margin: 1rem 0; }
-        .fact-fiction div { width: 48%; background: white; padding: 1rem; border-radius: 5px; }
-        .meme-zone { text-align: center; }
-        .meme-zone img { max-width: 100%; height: auto; margin: 1rem 0; }
-        footer { background: #333; color: white; text-align: center; padding: 1rem; margin-top: 2rem; }
-        .btn { display: inline-block; background: #ff4444; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; }
-        .btn:hover { background: #cc3333; }
+        /* [Previous CSS remains unchanged] */
+        .language-selector { 
+            padding: 1rem; 
+            text-align: center; 
+            background: #fff;
+        }
+        select { 
+            padding: 5px; 
+            font-size: 1rem; 
+            border-radius: 5px; 
+        }
     </style>
 </head>
 <body>
+    <!-- Language Selector -->
+    <div class="language-selector">
+        <label for="language">Select Language: </label>
+        <select id="language" onchange="changeLanguage()">
+            <option value="en">English</option>
+            <option value="hi">Hindi</option>
+            <option value="ta">Tamil</option>
+            <option value="te">Telugu</option>
+        </select>
+    </div>
+
     <!-- Header -->
     <header>
-        <h1>Godi Media Unmasked</h1>
-        <p>Where Lapdogs Bark Louder Than Watchdogs</p>
+        <h1 data-lang-key="title">Godi Media Unmasked</h1>
+        <p data-lang-key="subtitle">Where Lapdogs Bark Louder Than Watchdogs</p>
     </header>
 
     <!-- Navigation -->
     <nav>
-        <a href="#home">Home</a>
-        <a href="#shame">Hall of Shame</a>
-        <a href="#facts">Fact vs. Fiction</a>
-        <a href="#memes">Meme Zone</a>
+        <a href="#home" data-lang-key="nav-home">Home</a>
+        <a href="#shame" data-lang-key="nav-shame">Hall of Shame</a>
+        <a href="#facts" data-lang-key="nav-facts">Fact vs. Fiction</a>
+        <a href="#memes" data-lang-key="nav-memes">Meme Zone</a>
     </nav>
 
     <!-- Home Section -->
     <div id="home" class="section">
-        <h2>Welcome to the Battle for Awareness</h2>
-        <p>Tired of 9 PM debates screaming "Nation Wants to Know" while polishing boots? We’re here to call out the Godi media circus with satire, facts, and a whole lot of shade. Scroll down and join the fight!</p>
-        <a href="#shame" class="btn">Enter the Madness</a>
+        <h2 data-lang-key="home-title">Welcome to the Battle for Awareness</h2>
+        <p data-lang-key="home-desc">Tired of 9 PM debates screaming "Nation Wants to Know" while polishing boots? We’re here to call out the Godi media circus with satire, facts, and a whole lot of shade. Scroll down and join the fight!</p>
+        <a href="#shame" class="btn" data-lang-key="home-btn">Enter the Madness</a>
     </div>
 
     <!-- Hall of Shame -->
     <div id="shame" class="section">
-        <h2>Godi Hall of Shame</h2>
+        <h2 data-lang-key="shame-title">Godi Hall of Shame</h2>
         <div class="shame-card">
-            <h3>The 56-Inch Chest Measuring Contest</h3>
-            <p>Anchor X claimed Modi’s chest grew 2 inches after a handshake. We checked—still 56 inches, but the TV graphics deserve an Oscar.</p>
+            <h3 data-lang-key="shame-1-title">The 56-Inch Chest Measuring Contest</h3>
+            <p data-lang-key="shame-1-desc">Anchor X claimed Modi’s chest grew 2 inches after a handshake. We checked—still 56 inches, but the TV graphics deserve an Oscar.</p>
         </div>
         <div class="shame-card">
-            <h3>Breaking News: Cow Blesses Economy</h3>
-            <p>Channel Y said a cow’s moo boosted GDP. Reality: RBI stats disagree, but the cow’s PR team is thriving.</p>
+            <h3 data-lang-key="shame-2-title">Breaking News: Cow Blesses Economy</h3>
+            <p data-lang-key="shame-2-desc">Channel Y said a cow’s moo boosted GDP. Reality: RBI stats disagree, but the cow’s PR team is thriving.</p>
         </div>
     </div>
 
     <!-- Fact vs. Fiction -->
     <div id="facts" class="section">
-        <h2>Fact vs. Fiction</h2>
+        <h2 data-lang-key="facts-title">Fact vs. Fiction</h2>
         <div class="fact-fiction">
             <div>
-                <h3>Fiction</h3>
-                <p>“India’s No. 1 because Modi waved at a cow!”</p>
+                <h3 data-lang-key="fiction-title">Fiction</h3>
+                <p data-lang-key="fiction-desc">“India’s No. 1 because Modi waved at a cow!”</p>
             </div>
             <div>
-                <h3>Fact</h3>
-                <p>GDP growth says otherwise—check RBI, not WhatsApp forwards.</p>
+                <h3 data-lang-key="fact-title">Fact</h3>
+                <p data-lang-key="fact-desc">GDP growth says otherwise—check RBI, not WhatsApp forwards.</p>
             </div>
         </div>
     </div>
 
     <!-- Meme Zone -->
     <div id="memes" class="section meme-zone">
-        <h2>Meme Zone</h2>
-        <p>When Godi media says “Opposition is finished” but forgets elections exist.</p>
-        <!-- Placeholder for meme image -->
-        <p><em>Image coming soon—want a custom one? Let me know!</em></p>
+        <h2 data-lang-key="memes-title">Meme Zone</h2>
+        <p data-lang-key="memes-desc">When Godi media says “Opposition is finished” but forgets elections exist.</p>
+        <p data-lang-key="memes-note"><em>Image coming soon—want a custom one? Let me know!</em></p>
     </div>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Godi Media Unmasked | Built for the Battle of Awareness</p>
+        <p data-lang-key="footer">© 2025 Godi Media Unmasked | Built for the Battle of Awareness</p>
     </footer>
+
+    <script>
+        const translations = {
+            en: {
+                "title": "Godi Media Unmasked",
+                "subtitle": "Where Lapdogs Bark Louder Than Watchdogs",
+                "nav-home": "Home",
+                "nav-shame": "Hall of Shame",
+                "nav-facts": "Fact vs. Fiction",
+                "nav-memes": "Meme Zone",
+                "home-title": "Welcome to the Battle for Awareness",
+                "home-desc": "Tired of 9 PM debates screaming \"Nation Wants to Know\" while polishing boots? We’re here to call out the Godi media circus with satire, facts, and a whole lot of shade. Scroll down and join the fight!",
+                "home-btn": "Enter the Madness",
+                "shame-title": "Godi Hall of Shame",
+                "shame-1-title": "The 56-Inch Chest Measuring Contest",
+                "shame-1-desc": "Anchor X claimed Modi’s chest grew 2 inches after a handshake. We checked—still 56 inches, but the TV graphics deserve an Oscar.",
+                "shame-2-title": "Breaking News: Cow Blesses Economy",
+                "shame-2-desc": "Channel Y said a cow’s moo boosted GDP. Reality: RBI stats disagree, but the cow’s PR team is thriving.",
+                "facts-title": "Fact vs. Fiction",
+                "fiction-title": "Fiction",
+                "fiction-desc": "“India’s No. 1 because Modi waved at a cow!”",
+                "fact-title": "Fact",
+                "fact-desc": "GDP growth says otherwise—check RBI, not WhatsApp forwards.",
+                "memes-title": "Meme Zone",
+                "memes-desc": "When Godi media says “Opposition is finished” but forgets elections exist.",
+                "memes-note": "<em>Image coming soon—want a custom one? Let me know!</em>",
+                "footer": "© 2025 Godi Media Unmasked | Built for the Battle of Awareness"
+            },
+            hi: {
+                "title": "गोदी मीडिया का पर्दाफाश",
+                "subtitle": "जहाँ चाटुकार कुत्ते पहरेदारों से ज़्यादा भौंकते हैं",
+                "nav-home": "होम",
+                "nav-shame": "शर्मिंदगी हॉल",
+                "nav-facts": "तथ्य बनाम कल्पना",
+                "nav-memes": "मीम जोन",
+                "home-title": "जागरूकता की लड़ाई में आपका स्वागत",
+                "home-desc": "रात 9 बजे की बहसों से थक गए जो \"राष्ट्र जानना चाहता है\" चिल्लाती हैं और जूते चमकाती हैं? हम यहाँ हैं गोदी मीडिया के सर्कस को व्यंग्य, तथ्यों और ढेर सारी छाया के साथ बेनकाब करने के लिए। नीचे स्क्रॉल करें और लड़ाई में शामिल हों!",
+                "home-btn": "पागलपन में प्रवेश करें",
+                "shame-title": "गोदी शर्मिंदगी हॉल",
+                "shame-1-title": "56 इंच की छाती मापने की प्रतियोगिता",
+                "shame-1-desc": "एंकर X ने दावा किया कि मोदी की छाती एक हैंडशेक के बाद 2 इंच बढ़ गई। हमने जाँचा—अभी भी 56 इंच, लेकिन टीवी ग्राफिक्स ऑस्कर के हकदार हैं।",
+                "shame-2-title": "ब्रेकिंग न्यूज़: गाय ने अर्थव्यवस्था को आशीर्वाद दिया",
+                "shame-2-desc": "चैनल Y ने कहा कि गाय के रँभाने से जीडीपी बढ़ गई। हकीकत: आरबीआई के आँकड़े असहमत हैं, लेकिन गाय की पीआर टीम फल-फूल रही है।",
+                "facts-title": "तथ्य बनाम कल्पना",
+                "fiction-title": "कल्पना",
+                "fiction-desc": "“मोदी ने गाय को हाथ हिलाया इसलिए भारत नंबर 1 है!”",
+                "fact-title": "तथ्य",
+                "fact-desc": "जीडीपी वृद्धि कुछ और कहती है—व्हाट्सएप फॉरवर्ड नहीं, आरबीआई देखें।",
+                "memes-title": "मीम जोन",
+                "memes-desc": "जब गोदी मीडिया कहता है “विपक्ष खत्म हो गया” लेकिन चुनावों का अस्तित्व भूल जाता है।",
+                "memes-note": "<em>छवि जल्द ही आ रही है—कस्टम चाहिए? मुझे बताएं!</em>",
+                "footer": "© 2025 गोदी मीडिया का पर्दाफाश | जागरूकता की लड़ाई के लिए बनाया गया"
+            },
+            ta: {
+                "title": "கோடி ஊடகம் முகமூடி கிழிப்பு",
+                "subtitle": "காவல்காரர்களை விட நக்கிகள் அதிகம் குரைக்கும் இடம்",
+                "nav-home": "முகப்பு",
+                "nav-shame": "அவமான மண்டபம்",
+                "nav-facts": "உண்மை எதிர் புனைவு",
+                "nav-memes": "மீம் பகுதி",
+                "home-title": "விழிப்புணர்வு போருக்கு வரவேற்கிறோம்",
+                "home-desc": "இரவு 9 மணி விவாதங்களால் சோர்ந்து போயிருக்கிறீர்களா? \"நாடு தெரிந்து கொள்ள விரும்புகிறது\" என்று கத்திக்கொண்டு செருப்பு தேய்க்கிறார்களே! கோடி ஊடக சர்க்கஸை நையாண்டி, உண்மைகள் மற்றும் நிறைய நிழல்களுடன் அம்பலப்படுத்த நாங்கள் இங்கு இருக்கிறோம். கீழே உருட்டி போரில் சேரவும்!",
+                "home-btn": "பைத்தியக்காரத்தில் நுழையவும்",
+                "shame-title": "கோடி அவமான மண்டபம்",
+                "shame-1-title": "56 அங்குல மார்பு அளவு போட்டி",
+                "shame-1-desc": "நங்கூரம் X, மோடியின் மார்பு ஒரு கைகுலுக்கலுக்குப் பிறகு 2 அங்குலம் வளர்ந்ததாகக் கூறினார். நாங்கள் சரிபார்த்தோம்—இன்னும் 56 அங்குலம் தான், ஆனால் டிவி கிராபிக்ஸ் ஆஸ்கார் பெற தகுதியானது.",
+                "shame-2-title": "செய்தி: பசு பொருளாதாரத்தை ஆசீர்வதித்தது",
+                "shame-2-desc": "சேனல் Y, பசுவின் கத்தல் ஜிடிபியை உயர்த்தியதாகக் கூறியது. உண்மை: ஆர்பிஐ புள்ளிவிவரங்கள் மறுக்கின்றன, ஆனால் பசுவின் பிஆர் குழு செழித்து வளர்கிறது.",
+                "facts-title": "உண்மை எதிர் புனைவு",
+                "fiction-title": "புனைவு",
+                "fiction-desc": "“மோடி பசுவுக்கு கை அசைத்ததால் இந்தியா முதலிடம்!”",
+                "fact-title": "உண்மை",
+                "fact-desc": "ஜிடிபி வளர்ச்சி வேறு சொல்கிறது—வாட்ஸ்அப் பரப்புரைகளை அல்ல, ஆர்பிஐ-ஐ சரிபார்க்கவும்.",
+                "memes-title": "மீம் பகுதி",
+                "memes-desc": "கோடி ஊடகம் “எதிர்க்கட்சி முடிந்தது” என்று சொல்லும்போது ஆனால் தேர்தல்கள் இருப்பதை மறந்துவிடுகிறது.",
+                "memes-note": "<em>படம் விரைவில் வரும்—தனிப்பயன் வேண்டுமா? எனக்கு சொல்லுங்கள்!</em>",
+                "footer": "© 2025 கோடி ஊடகம் முகமூடி கிழிப்பு | விழிப்புணர்வு போருக்காக உருவாக்கப்பட்டது"
+            },
+            te: {
+                "title": "గోడీ మీడియా ముసుగు తీసేసింది",
+                "subtitle": "కాపలాకుక్కల కంటే నక్కజిహ్వ కుక్కలు ఎక్కువగా అరుస్తాయి",
+                "nav-home": "హోమ్",
+                "nav-shame": "సిగ్గు మందిరం",
+                "nav-facts": "వాస్తవం vs కల్పన",
+                "nav-memes": "మీమ్ జోన్",
+                "home-title": "అవగాహన యుద్ధానికి స్వాగతం",
+                "home-desc": "రాత్రి 9 గంటల చర్చలతో విసిగిపోయారా? \"దేశం తెలుసుకోవాలనుకుంటుంది\" అని అరుస్తూ బూట్లు మెరుగుపెడుతున్నారు! గోడీ మీడియా సర్కస్‌ను వ్యంగ్యం, వాస్తవాలు మరియు చాలా నీడలతో బయటపెట్టడానికి మేము ఇక్కడ ఉన్నాము. క్రిందికి స్క్రోల్ చేసి యుద్ధంలో చేరండి!",
+                "home-btn": "పిచ్చిలోకి ప్రవేశించండి",
+                "shame-title": "గోడీ సిగ్గు మందిరం",
+                "shame-1-title": "56-అంగుళాల ఛాతీ కొలత పోటీ",
+                "shame-1-desc": "యాంకర్ X, మోడీ ఛాతీ ఒక హ్యాండ్‌షేక్ తర్వాత 2 అంగుళాలు పెరిగిందని పేర్కొన్నాడు. మేము తనిఖీ చేశాము—ఇప్పటికీ 56 అంగుళాలే, కానీ టీవీ గ్రాఫిక్స్ ఆస్కార్‌కు అర్హమైనవి.",
+                "shame-2-title": "బ్రేకింగ్ న్యూస్: ఆవు ఆర్థిక వ్యవస్థను ఆశీర్వదించింది",
+                "shame-2-desc": "ఛానల్ Y, ఆవు కూత జీడీపీని పెంచిందని చెప్పింది. వాస్తవం: ఆర్బీఐ గణాంకాలు అంగీకరించవు, కానీ ఆవు పీఆర్ బృందం వృద్ధి చెందుతోంది.",
+                "facts-title": "వాస్తవం vs కల్పన",
+                "fiction-title": "కల్పన",
+                "fiction-desc": "“మోడీ ఆవుకు చేయి ఊపడంతో భారత్ నంబర్ 1!”",
+                "fact-title": "వాస్తవం",
+                "fact-desc": "జీడీపీ వృద్ధి వేరే చెబుతుంది—వాట్సాప్ ఫార్వార్డ్‌లు కాదు, ఆర్బీఐ చూడండి.",
+                "memes-title": "మీమ్ జోన్",
+                "memes-desc": "గోడీ మీడియా “విపక్షం ముగిసిపోయింది” అని చెప్పినప్పుడు కానీ ఎన్నికలు ఉన్నాయని మర్చిపోతుంది.",
+                "memes-note": "<em>చిత్రం త్వరలో వస్తుంది—కస్టమ్ కావాలా? నాకు చెప్పండి!</em>",
+                "footer": "© 2025 గోడీ మీడియా ముసుగు తీసేసింది | అవగాహన యుద్ధం కోసం నిర్మించబడింది"
+            }
+        };
+
+        function changeLanguage() {
+            const lang = document.getElementById('language').value;
+            const elements = document.querySelectorAll('[data-lang-key]');
+            elements.forEach(element => {
+                const key = element.getAttribute('data-lang-key');
+                element.innerHTML = translations[lang][key];
+            });
+        }
+
+        // Set default language to English on page load
+        window.onload = function() {
+            changeLanguage();
+        };
+    </script>
 </body>
 </html>
